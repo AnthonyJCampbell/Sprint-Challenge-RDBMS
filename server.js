@@ -3,7 +3,7 @@ const server = express();
 
 // Import routes
 const projectRoutes = require('./projects/projectsRoutes');
-const actionsRoutes = require('./actions/actionssRoutes');
+const actionsRoutes = require('./actions/actionsRoutes');
 
 server.use(express.json())
 
