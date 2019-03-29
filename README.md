@@ -33,24 +33,28 @@ This will be akin to the Web API that you built in the last sprint, only this ti
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 1. Explain the difference between `RDBMS` and `SQL`.
+At its core, SQL is a query language, while Relational Database Management Systems are the platforms that use SQL for their purposes, but they are not one and the same. RDBMS' can add extra features that are not found within normal SQL. For example, SQL is the normal language, while SQLite is a system build _on top_ of it.
 
 1. Why do tables need a `primary key`?
-A primary key is used to identify data from anywhere in the database
+A primary key is a unique identifier attached to every single row in a table. By default, it has to be unique and not null. For example, when having a table called `friends`, I might have more than one friend named `Clark Kent`. Without a primary key, I wouldn't be able to distinguish between the two, despite one living in Metropolis and the other in Kansas. If I know that one Clark has a primary key of 7 and the other of 21, I'd be able to keep the two apart and use them for seperate purposes.
+
 1. What is the name given to a table column that references the primary key on another table.
-A foreign key
+It's called a foreign key. At its core, it a way to create a reference to another table. If the two values are the same (for example in the case for userid), we can then join the two tables together and use our data in new ways.
+
 1. What do we need in order to have a _many to many_ relationship between two tables.
-Two different data types without any shared data like ids
+When having two tables that link to each other without having a foreign key in common, we add a third table that holds the foreign keys to both existing tables. In doing so, we reference the primary key and can 'link' data without having to add more columns to our tables.
+
 
 ## Project Set Up
 
 Follow these steps for starting your project.
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your project manager as collaborator on Github.
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Add your project manager as collaborator on Github.
+- [x] Clone your OWN version of the repository (Not Lambda's by mistake!).
+- [x] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [x] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project.
 
@@ -63,7 +67,7 @@ Follow these steps for completing your project.
 **NOTE** There is no boilerplate for you for this project. You will need to take the steps necessary for creating this project from scratch. Start by initializing your project with a `package.json` file and go from there.
 
 - [ ] A `project` can contain multiple actions and has:
-  - [ ] a unique Id.
+  - [x] a unique Id.
   - [ ] a name.
   - [ ] a description.
   - [ ] a flag that indicates if the project is complete or not.
