@@ -7,7 +7,7 @@ exports.up = function(knex, Promise) {
 
     table.string('project_desc', 255).notNullable();
 
-    table.boolean('completed').defaultTo(false)
+    table.string('completed').defaultTo('false')
   })
 };
 
